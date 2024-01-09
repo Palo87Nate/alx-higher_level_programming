@@ -1,10 +1,13 @@
 #!/usr/bin/python3
 """
-A function that reads a text file (UTF8) and prints it to stdout:
+A function that writes a string to a text file (UTF8)
+Returns the number of characters written
 """
 
 
-def read_file(filename=""):
-    """calling the function"""
-    with open(filename, encoding="UTF-8") as readfile:
-        print(readfile.read(), end="")
+def write_file(filename="", text=""):
+    """
+    Calling the function
+    """
+    with open(filename, mode="w", encoding="UTF8") as writefile:
+        return writefile.write(text)
